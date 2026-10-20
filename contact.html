@@ -135,7 +135,7 @@ photoInput.addEventListener('change', async (e)=>{
   btn.textContent = 'Compressing photo...';
   
   try {
-    compressedFile = await compressImage(file, 1280, 0.7);
+    compressedFile = await compressImage(file, 1024, 0.55);
     statusEl.textContent = `✅ Compressed: ${(file.size/1024/1024).toFixed(1)}MB → ${(compressedFile.size/1024).toFixed(0)}KB — ready`;
     preview.src = URL.createObjectURL(compressedFile);
     preview.style.display = 'block';
