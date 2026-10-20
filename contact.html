@@ -1,48 +1,295 @@
-<!-- MotorLabs Caliper Form - Formspree version -->
-<form action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data">
-  
-  <label>Your Name & WhatsApp *</label>
-  <input type="text" name="name_whatsapp" placeholder="Sipho - 082 123 4567" required>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotorLabs - Contact</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        background: #f5f5f0;
+        color: #222;
+        line-height: 1.5;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+      .header {
+        background: #111;
+        padding: 22px 28px;
+        color: #fff;
+      }
+      .header h1 {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+      .header p {
+        opacity: 0.7;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+      form {
+        padding: 28px;
+        display: grid;
+        gap: 18px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      @media (max-width: 650px) {
+        .row {
+          grid-template-columns: 1fr;
+        }
+      }
+      label {
+        font-weight: 600;
+        font-size: 13px;
+        display: block;
+        margin-bottom: 6px;
+      }
+      label span {
+        color: #c00;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #fff;
+        transition: 0.15s;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #111;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+      }
+      .checks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 16px;
+        background: #fafaf7;
+        padding: 14px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+      }
+      @media (max-width: 650px) {
+        .checks {
+          grid-template-columns: 1fr;
+        }
+      }
+      .checks label {
+        font-weight: 400;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .file-box {
+        border: 2px dashed #bbb;
+        border-radius: 10px;
+        padding: 18px;
+        text-align: center;
+        background: #fcfcfb;
+        transition: 0.15s;
+      }
+      .file-box:hover {
+        border-color: #111;
+        background: #f5f5f0;
+      }
+      .file-box input {
+        margin-top: 8px;
+      }
+      .hint {
+        font-size: 12.5px;
+        color: #666;
+        background: #fff8e1;
+        border: 1px solid #ffe9a8;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+      button {
+        background: #111;
+        color: #fff;
+        border: 0;
+        padding: 13px 22px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.15s;
+      }
+      button:hover {
+        background: #000;
+        transform: translateY(-1px);
+      }
+      .footer-note {
+        font-size: 12px;
+        color: #888;
+        padding: 0 28px 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>MotorLabs — Brake Caliper Refresh</h1>
+        <p>Richards Bay — Home workshop, by appointment. Bench or full fit.</p>
+      </div>
 
-  <label>Vehicle Make / Model / Year *</label>
-  <input type="text" name="vehicle" placeholder="e.g. Mitsubishi Colt 2.8TDi 2004" required>
+      <!-- CHANGE action to your Formspree or FormSubmit -->
+      <form
+        action="https://formsubmit.co/hello@motorlabs.co.za"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <div>
+            <label>Your Name & WhatsApp <span>*</span></label>
+            <input
+              type="text"
+              name="Name & WhatsApp"
+              placeholder="Sipho - 082 123 4567"
+              required
+            />
+          </div>
+          <div>
+            <label>Vehicle Make / Model / Year <span>*</span></label>
+            <input
+              type="text"
+              name="Vehicle Make Model Year"
+              placeholder="e.g. Mitsubishi Colt 2.8TDi 2004"
+              required
+            />
+          </div>
+        </div>
 
-  <label>Which caliper? *</label>
-  <select name="which_caliper" required>
-    <option value="" disabled selected>Select...</option>
-    <option>Front Left</option>
-    <option>Front Right</option>
-    <option>Rear Left</option>
-    <option>Rear Right</option>
-    <option>Both Front</option>
-    <option>Both Rear</option>
-    <option>Not sure - need advice</option>
-  </select>
+        <div class="row">
+          <div>
+            <label>Which caliper? <span>*</span></label>
+            <select name="Which caliper?" required>
+              <option value="" disabled selected>Select...</option>
+              <option>Front Left</option>
+              <option>Front Right</option>
+              <option>Rear Left</option>
+              <option>Rear Right</option>
+              <option>Both Front</option>
+              <option>Both Rear</option>
+              <option>Not sure - need advice</option>
+            </select>
+          </div>
+          <div>
+            <label>Service you need <span>*</span></label>
+            <select name="Service you need" required>
+              <option value="" disabled selected>Select...</option>
+              <option>Bench R550 from - I bring caliper</option>
+              <option>Full service R1200 from - you (MotorLabs) do all</option>
+              <option>Not sure - advise me</option>
+            </select>
+          </div>
+        </div>
 
-  <label>What is it doing? (tick)</label>
-  <label><input type="checkbox" name="issue" value="Sticking / not releasing"> Sticking / not releasing</label>
-  <label><input type="checkbox" name="issue" value="Leaking fluid"> Leaking fluid</label>
-  <label><input type="checkbox" name="issue" value="Torn dust boot"> Torn dust boot</label>
-  <label><input type="checkbox" name="issue" value="Seized piston"> Seized piston</label>
-  <label><input type="checkbox" name="issue" value="Preventative refresh"> Preventative refresh</label>
+        <div>
+          <label>What is it doing? (tick)</label>
+          <div class="checks">
+            <label
+              ><input
+                type="checkbox"
+                name="Issue"
+                value="Sticking / not releasing"
+              />
+              Sticking / not releasing</label
+            >
+            <label
+              ><input type="checkbox" name="Issue" value="Leaking fluid" />
+              Leaking fluid</label
+            >
+            <label
+              ><input type="checkbox" name="Issue" value="Torn dust boot" />
+              Torn dust boot</label
+            >
+            <label
+              ><input type="checkbox" name="Issue" value="Seized piston" />
+              Seized piston</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="Issue"
+                value="Preventative refresh"
+              />
+              Preventative refresh</label
+            >
+          </div>
+        </div>
 
-  <label>Service you want *</label>
-  <select name="service_type" required>
-    <option value="" disabled selected>Select...</option>
-    <option>Bench R550 from - I bring caliper loose</option>
-    <option>Full service R1200 from - you do all</option>
-    <option>Not sure - advise me (ladies / first time welcome)</option>
-  </select>
+        <div>
+          <label>Extra info</label>
+          <textarea
+            name="Extra info"
+            rows="3"
+            placeholder="e.g. ABS light, other side done..."
+          ></textarea>
+        </div>
 
-  <label>Extra info</label>
-  <textarea name="extra_info" rows="3" placeholder="e.g. ABS light, other side done..."></textarea>
+        <div class="file-box">
+          <label style="margin: 0"
+            >📸 Upload caliper photo (if available)</label
+          >
+          <div style="font-size: 13px; color: #666; margin: 4px 0 8px">
+            JPG/PNG, max 3MB on FormSubmit free. Big file? WhatsApp after.
+          </div>
+          <input type="file" name="attachment" accept="image/*,.pdf" />
+        </div>
 
-  <!-- Photo: Formspree file upload is paid feature, so better WhatsApp -->
-  <p style="font-size:0.9em;">After submit, please WhatsApp photo of caliper if you have it.</p>
+        <div class="hint">
+          After submit, please WhatsApp photo of caliper if you have it — we
+          prefer WhatsApp (082 XXX XXXX). Saves data, faster quote.
+        </div>
 
-  <!-- Formspree helpers -->
-  <input type="hidden" name="_subject" value="NEW MotorLabs Caliper Request">
-  <input type="hidden" name="_next" value="https://yourdomain.co.za/thanks.html">
+        <!-- FormSubmit helpers -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="NEW MotorLabs Caliper Request + Photo"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://motorlabs.co.za/thanks.html"
+        />
 
-  <button type="submit">Send to MotorLabs</button>
-</form>
+        <button type="submit">Send to MotorLabs</button>
+      </form>
+      <!--
+  <div class="footer-note">Form works with FormSubmit.co, Formspree, Getform — just change form action URL. No React, no JS needed.</div>
+  -->
+    </div>
+  </body>
+</html>
