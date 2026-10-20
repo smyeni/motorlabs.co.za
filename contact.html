@@ -1,0 +1,48 @@
+<!-- MotorLabs Caliper Form - Formspree version -->
+<form action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data">
+  
+  <label>Your Name & WhatsApp *</label>
+  <input type="text" name="name_whatsapp" placeholder="Sipho - 082 123 4567" required>
+
+  <label>Vehicle Make / Model / Year *</label>
+  <input type="text" name="vehicle" placeholder="e.g. Mitsubishi Colt 2.8TDi 2004" required>
+
+  <label>Which caliper? *</label>
+  <select name="which_caliper" required>
+    <option value="" disabled selected>Select...</option>
+    <option>Front Left</option>
+    <option>Front Right</option>
+    <option>Rear Left</option>
+    <option>Rear Right</option>
+    <option>Both Front</option>
+    <option>Both Rear</option>
+    <option>Not sure - need advice</option>
+  </select>
+
+  <label>What is it doing? (tick)</label>
+  <label><input type="checkbox" name="issue" value="Sticking / not releasing"> Sticking / not releasing</label>
+  <label><input type="checkbox" name="issue" value="Leaking fluid"> Leaking fluid</label>
+  <label><input type="checkbox" name="issue" value="Torn dust boot"> Torn dust boot</label>
+  <label><input type="checkbox" name="issue" value="Seized piston"> Seized piston</label>
+  <label><input type="checkbox" name="issue" value="Preventative refresh"> Preventative refresh</label>
+
+  <label>Service you want *</label>
+  <select name="service_type" required>
+    <option value="" disabled selected>Select...</option>
+    <option>Bench R550 from - I bring caliper loose</option>
+    <option>Full service R1200 from - you do all</option>
+    <option>Not sure - advise me (ladies / first time welcome)</option>
+  </select>
+
+  <label>Extra info</label>
+  <textarea name="extra_info" rows="3" placeholder="e.g. ABS light, other side done..."></textarea>
+
+  <!-- Photo: Formspree file upload is paid feature, so better WhatsApp -->
+  <p style="font-size:0.9em;">After submit, please WhatsApp photo of caliper if you have it.</p>
+
+  <!-- Formspree helpers -->
+  <input type="hidden" name="_subject" value="NEW MotorLabs Caliper Request">
+  <input type="hidden" name="_next" value="https://yourdomain.co.za/thanks.html">
+
+  <button type="submit">Send to MotorLabs</button>
+</form>
